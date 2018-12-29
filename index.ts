@@ -1,10 +1,14 @@
 //npm install @types/cors --save-dev
+//si la cagas puedes hacer git checkout -- .
+//git tag
+//git tag -a v1.0.0 -m "REST server listo"
+//git push --tags
 import Server from "./classes/server";
 import router from "./routes/router";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-const server = new Server();
+const server = Server.instance;
 
 //BODYPARSER
 server.app.use(bodyParser.urlencoded({extended: true}));
